@@ -56,7 +56,8 @@ A robust, role-based banking system API built with Django, Django REST Framework
    ```bash
     docker compose up -d
 
-**Chances of issues** - Docker port conflixts
+### Chances of issues
+1.  Port conflicts:
     ```bash
    sudo lsof -i :6379
    sudo kill -9 <PID>
