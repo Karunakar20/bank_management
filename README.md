@@ -103,6 +103,8 @@ Responce
 **Create User (Manager)**
 ```json
 POST /api/user/create/
+headers
+Authorization   Token fc0abf7bad1e7b39e10cb11e2f43d03eb9ece74b6c27e06bdf5749e92705bd3b
 {
   "email": "customer@bank.com",
   "mobile_number": "9876543210",
