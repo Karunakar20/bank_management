@@ -100,7 +100,7 @@ Responce
 ```
 
 
-**Create User (Manager)**
+**Create User**
 ```json
 POST /api/user/create/
 
@@ -126,7 +126,7 @@ Authorization - Token fc0abf7bad1e7b39e10cb11e2f43d03eb9ece74b6c27e06bdf5749e927
 }
 ```
 
-**Apply Interest (Manager)**
+**Apply Interest**
 ```json
 POST account/apply/interest/
 
@@ -147,5 +147,13 @@ Authorization - Token fc0abf7bad1e7b39e10cb11e2f43d03eb9ece74b6c27e06bdf5749e927
   "customer_id": "CUST123456",
   "amount": 5000
 }
+```
+
+**Get Account**
+```json
+GET /api/account/<str:customer_id>/
+
+headers
+Authorization - Token fc0abf7bad1e7b39e10cb11e2f43d03eb9ece74b6c27e06bdf5749e92705bd3b
 ```
 
