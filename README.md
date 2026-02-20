@@ -16,3 +16,45 @@ A robust, role-based banking system API built with Django, Django REST Framework
 
 - [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/)
 - Python 3.11+ and Redis (for local development)
+
+
+### Installation
+1.  Clone the repository:
+    ```bash
+    git clone <repo_url>
+    ```
+### Setup for backend
+1.  Navigate to the project directory
+     ```bash
+    cd bank_management
+    ```
+2.  Create virtual environment (.venv)
+     ```bash
+    python3 -m venv .venv
+    ```
+3.  Activate Virtual Environment
+      ```bash
+    source .venv/bin/activate
+    ```
+4.  Install dependencies:
+       ```bash
+    pip install -r requirements.txt
+    ```
+5.  Create Migration Files
+      ```bash
+    python manage.py makemigrations
+    ```
+6.  Apply Migrations to Database
+      ```bash
+    python manage.py migrate
+    ```
+7.  Intilaize intigrations (Will create a manager)
+      ```bash
+    python initializer.py
+
+8. Docker setup
+   ```bash
+    docker compose up -d
+
+   **Chances of issues - Docker port conflixts
+   
