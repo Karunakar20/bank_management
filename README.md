@@ -71,5 +71,48 @@ A robust, role-based banking system API built with Django, Django REST Framework
     ```bash
     exec celery -A banking_system worker -l info
     ```
-   
-   
+
+## API Documentation
+
+### Authentication
+The API uses Session Authentication (standard Django login) or Basic Auth for simplicity in testing.
+
+### Endpoints
+
+| Method | Endpoint | Description | Role Required |
+|d---|---|---|---|
+| POST | `/api/user/create/` | Create a new Employee or Customer | Manager |
+| GET | `/api/account/<customer_id>/` | View account details and loans | Owner, Employee, Manager |
+| POST | `/api/loan/pay/` | Pay a loan installment | Owner |
+| POST | `/api/account/apply_interest/` | Apply interest to all accounts | Manager |
+
+### Sample Payloads
+
+**Create User (Manager)**
+```json
+POST /api/user/create/
+{
+  "email": "customer@bank.com",
+  "mobile_number": "9876543210",
+  "role": "customer",
+  "password": "pass"
+}
+```
+
+**Pay Loan**
+```json
+POST /api/loan/pay/
+{
+  "customer_id": "CUST123456",
+  "amount": 5000
+}
+```
+
+**Apply Interest (Manager)**
+```json
+POST /api/account/apply_interest/
+{
+  "interest_percent": 5.0
+}
+```
+
