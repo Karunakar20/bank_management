@@ -7,7 +7,7 @@ A robust, role-based banking system API built with Django, Django REST Framework
   - **Customer**: View own account, pay loans.
   - **Employee**: View customer accounts.
   - **Manager**: View all accounts, create users, apply interest.
-- **Loan Management**: Issue loans (via admin/shell), pay loans via API.
+- **Loan Management**: Issue loans and pay loans via API.
 - **Async Processing**: Interest application handled asynchronously using Celery and Redis.
 - **Data Integrity**: Atomic transactions for critical financial operations.
 - **Dockerized**: Easy deployment with Docker Compose.
@@ -60,5 +60,6 @@ A robust, role-based banking system API built with Django, Django REST Framework
     ```bash
    sudo lsof -i :6379
    sudo kill -9 <PID>
+   ```
    
    
