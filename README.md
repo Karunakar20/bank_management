@@ -71,16 +71,5 @@ A robust, role-based banking system API built with Django, Django REST Framework
     ```bash
     exec celery -A banking_system worker -l info
     ```
-    
-### Endpoints
-
-| Method | Endpoint | Description | Role Required |
-|d---|---|---|---|
-| POST | `/api/user/create/` | Create a new Employee or Customer | Manager |
-| GET | `/account/<str:customer_id>/` | View account details and loans | Customer, Employee, Manager |
-| POST | `/api/loan/pay/` | Pay a loan installment | Owner |
-| POST | `account/apply/interest/` | Apply interest to all accounts | Manager |
-| POST | `take/loan/` | Take Lone| Customer|
-| POST | `login/` | Login| Customer, Employee, Manager|
    
    
