@@ -15,4 +15,4 @@ A robust, role-based banking system API built with Django, Django REST Framework
 ## Prerequisites
 
 - [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/)
-- OR Python 3.11+ and Redis (for local development)
+- Python 3.11+ and Redis (for local development)
