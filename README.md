@@ -86,7 +86,19 @@ POST /api/login/
     "email": "manager@bank.com",
     "password": "securepass"
 }
+Responce
+{
+    "user": {
+        "email": "customer@customer.com",
+        "mobile_number": "12235698",
+        "customer_id": "CUST171757",
+        "role": "customer",
+        "is_active": true
+    },
+    "token": "fc0abf7bad1e7b39e10cb11e2f43d03eb9ece74b6c27e06bdf5749e92705bd3b"
+}
 ```
+
 
 **Create User (Manager)**
 ```json
