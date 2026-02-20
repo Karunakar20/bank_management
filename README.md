@@ -77,16 +77,16 @@ A robust, role-based banking system API built with Django, Django REST Framework
 ### Authentication
 The API uses Session Authentication (standard Django login) or Basic Auth for simplicity in testing.
 
-### Endpoints
-
-| Method | Endpoint | Description | Role Required |
-|d---|---|---|---|
-| POST | `/api/user/create/` | Create a new Employee or Customer | Manager |
-| GET | `/api/account/<customer_id>/` | View account details and loans | Owner, Employee, Manager |
-| POST | `/api/loan/pay/` | Pay a loan installment | Owner |
-| POST | `/api/account/apply_interest/` | Apply interest to all accounts | Manager |
-
 ### Sample Payloads
+
+**Login**
+```json
+POST /api/login/
+{
+    "email": "manager@bank.com",
+    "password": "securepass"
+}
+```
 
 **Create User (Manager)**
 ```json
