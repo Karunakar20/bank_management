@@ -58,14 +58,14 @@ A robust, role-based banking system API built with Django, Django REST Framework
 
 ### Chances of issues
 
-1.  Clone the repository:
+1.  Check Port conflict:
     ```bash
-    git clone <repo_url>
+    sudo lsof -i :6379
     ```
-1.  Port conflicts:
+2.  Kill port:
     ```bash
-   sudo lsof -i :6379
-   sudo kill -9 <PID>
-   ```
+    sudo kill -9 <PID>
+    ```
+
    
    
