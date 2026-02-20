@@ -66,6 +66,12 @@ A robust, role-based banking system API built with Django, Django REST Framework
     ```bash
     sudo kill -9 <PID>
     ```
+### Cleary
+1.  Run celery:
+    ```bash
+    exec celery -A banking_system worker -l info
+    ```
+    
 ### Endpoints
 
 | Method | Endpoint | Description | Role Required |
