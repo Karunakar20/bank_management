@@ -69,7 +69,7 @@ A robust, role-based banking system API built with Django, Django REST Framework
 ### Cleary
 1.  Run celery:
     ```bash
-    exec celery -A banking_system worker -l info
+    exec celery -A bank_management worker -l info
     ```
 
 ## API Documentation
