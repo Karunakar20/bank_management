@@ -19,10 +19,6 @@ class ApplyInterestService:
           except ValueError:
                return Response({"error": "Invalid interest_percent."}, status=400)
 
-          task = apply_interest_task(interest_percent)
-
-          return Response({
-              "updated_count": task['updated_count'],
-               "updated_accounts": task['updated_accounts']
-               
-          })
+          apply_interest_task.delay(interest_percent)
+          
+          return Response({"message": "Interest application started. Check task status for results."})
