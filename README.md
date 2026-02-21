@@ -71,6 +71,11 @@ A robust, role-based banking system API built with Django, Django REST Framework
     ```bash
     exec celery -A bank_management worker -l info
     ```
+### Redis commander
+1.  url:
+    ```bash
+    http://localhost:8081/
+    ```
 
 ## API Documentation
 
