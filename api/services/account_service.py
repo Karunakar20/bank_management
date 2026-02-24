@@ -1,4 +1,5 @@
 from rest_framework.response import Response
+from django.db.models import Q
 
 from api.api_models.bank_management_models import CustomUser,Roles,BankAccount,Loan
 from api.serializer.bank_management_serializer import AccountSerializer,CustomUserSerializer,LoanSerializer,BankAccountSerializer
@@ -39,7 +40,8 @@ class AccountService:
                     return Response({"error": "User not found"}, status=403)
                
                if custom_user.role == Roles.EMPLOYEE:
-                    user = CustomUser.objects.filter(role = Roles.CUSTOMER)
+                    user = CustomUser.objects.filter(Q(role__in = [Roles.CUSTOMER])
+                                                     | Q(customer_id=self.id))
                     
                if custom_user.role == Roles.CUSTOMER:
                     user = CustomUser.objects.filter(customer_id = self.id, role= Roles.CUSTOMER)
@@ -49,7 +51,7 @@ class AccountService:
  
                response = AccountSerializer(user,many=True).data
 
-               return Response(response, status=403)
+               return Response(response, status=200)
           
           except Exception as e:
                return Response({"error": str(e)}, status=400)
